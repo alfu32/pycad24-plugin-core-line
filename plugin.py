@@ -36,10 +36,10 @@ class PycadCoreLinePlugin(PluginInterface):
     _instance = None
 
     @staticmethod
-    def get_instance() -> 'SamplePlugin':
-        if SamplePlugin._instance is None:
-            SamplePlugin._instance = PycadCoreLinePlugin()
-        return SamplePlugin._instance
+    def get_instance() -> 'PycadCoreLinePlugin':
+        if PycadCoreLinePlugin._instance is None:
+            PycadCoreLinePlugin._instance=PluginInterface()
+        return PycadCoreLinePlugin._instance
     
     def destroy_ui(self, element: QWidget):
         pass
