@@ -38,7 +38,7 @@ class PycadCoreLinePlugin(PluginInterface):
     @staticmethod
     def get_instance() -> 'PycadCoreLinePlugin':
         if PycadCoreLinePlugin._instance is None:
-            PycadCoreLinePlugin._instance=PluginInterface()
+            PycadCoreLinePlugin._instance=PycadCoreLinePlugin()
         return PycadCoreLinePlugin._instance
     
     def destroy_ui(self, element: QWidget):
