@@ -33,9 +33,13 @@ class PycadCoreLinePlugin(PluginInterface):
         def draw(self, painter: QPainter):
             painter.drawLine(self.start_point.x(), self.start_point.y(), self.end_point.x(), self.end_point.y())
             pass
+    _instance = None
 
-    def init_ui(self) ->QWidget:
-        return QPushButton("line")
+    @staticmethod
+    def get_instance() -> 'SamplePlugin':
+        if SamplePlugin._instance is None:
+            SamplePlugin._instance = PycadCoreLinePlugin()
+        return SamplePlugin._instance
     
     def destroy_ui(self, element: QWidget):
         pass
