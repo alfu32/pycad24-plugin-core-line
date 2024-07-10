@@ -6,8 +6,7 @@ from PySide6.QtWidgets import QWidget
 
 from pycad.ComponentLayers import LayerModel
 from pycad.Drawable import Drawable
-
-from pycad import PluginInterface
+from pycad.PluginInterface import PluginInterface
 
 class PycadCoreLinePlugin(PluginInterface):
   
