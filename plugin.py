@@ -8,6 +8,9 @@ from pycad.ComponentLayers import LayerModel
 from pycad.Drawable import Drawable
 from pycad.Plugin import PluginInterface
 
+def init_plugin(app):
+    print("initializing line plugin",flush=True)
+
 class PycadCoreLinePlugin(PluginInterface):
   
     class Line(Drawable):
